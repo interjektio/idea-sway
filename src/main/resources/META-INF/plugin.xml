@@ -28,7 +28,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <!-- Register our stuff here as a serverSupportProvider -->
         <platform.lsp.serverSupportProvider
-                implementation="fi.interjektio.dev.idea.sway.SwayLspServerSupportProvider"
+                implementation="fi.interjektio.dev.idea.sway.lsp.SwayLspServerSupportProvider"
         />
         <fileType
                 name="Sway"

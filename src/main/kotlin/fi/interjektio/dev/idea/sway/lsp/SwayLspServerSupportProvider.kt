@@ -1,13 +1,13 @@
-package fi.interjektio.dev.idea.sway
+// Most of this is adapted from
+// https://plugins.jetbrains.com/docs/intellij/language-server-protocol.html
+package fi.interjektio.dev.idea.sway.lsp
+
 import com.intellij.execution.configurations.GeneralCommandLine
+import com.intellij.openapi.diagnostic.logger
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.platform.lsp.api.LspServerSupportProvider
 import com.intellij.platform.lsp.api.ProjectWideLspServerDescriptor
-import com.intellij.openapi.diagnostic.logger
-
-// Most of this is adapted from
-// https://plugins.jetbrains.com/docs/intellij/language-server-protocol.html
 
 private const val FILE_EXTENSION = "sw";
 private const val LSP_COMMAND = "forc-lsp";
