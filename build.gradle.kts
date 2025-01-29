@@ -32,6 +32,12 @@ dependencies {
 //}
 //
 
+//sourceSets {
+//    main {
+//        resources.srcDirs("src/main/resources")
+//    }
+//}
+
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {

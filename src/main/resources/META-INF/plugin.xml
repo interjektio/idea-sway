@@ -30,5 +30,15 @@
         <platform.lsp.serverSupportProvider
                 implementation="fi.interjektio.dev.idea.sway.SwayLspServerSupportProvider"
         />
+        <fileType
+                name="Sway"
+                language="Sway"
+                implementationClass="fi.interjektio.dev.idea.sway.lang.SwayFileType"
+                fieldName="INSTANCE"
+        />
+        <lang.syntaxHighlighter
+                language="Sway"
+                implementationClass="fi.interjektio.dev.idea.sway.lang.highlighting.SwaySyntaxHighlighter"
+        />
     </extensions>
 </idea-plugin>
