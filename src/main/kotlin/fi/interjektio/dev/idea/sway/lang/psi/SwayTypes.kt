@@ -12,4 +12,5 @@ object SwayTypes {
     @JvmField val STRING = SwayTokenType("STRING")
     @JvmField val COMMENT = SwayTokenType("COMMENT")
     @JvmField val OPERATOR = SwayTokenType("OPERATOR")
+    @JvmField val TYPE = SwayTokenType("TYPE")
 }

@@ -9,7 +9,6 @@ import fi.interjektio.dev.idea.sway.lang.lexer.SwayLexer
 import fi.interjektio.dev.idea.sway.lang.psi.SwayTypes
 
 class SwaySyntaxHighlighter : SyntaxHighlighterBase() {
-
     override fun getHighlightingLexer(): Lexer = SwayLexer()
 
     override fun getTokenHighlights(tokenType: IElementType?): Array<TextAttributesKey> = when (tokenType) {
@@ -19,6 +18,7 @@ class SwaySyntaxHighlighter : SyntaxHighlighterBase() {
         SwayTypes.NUMBER -> arrayOf(NUMBER)
         SwayTypes.COMMENT -> arrayOf(COMMENT)
         SwayTypes.OPERATOR -> arrayOf(OPERATOR)
+        SwayTypes.TYPE -> arrayOf(TYPE)
         else -> emptyArray()
     }
 
@@ -29,5 +29,6 @@ class SwaySyntaxHighlighter : SyntaxHighlighterBase() {
         val NUMBER = TextAttributesKey.createTextAttributesKey("SWAY_NUMBER", DefaultLanguageHighlighterColors.NUMBER)
         val COMMENT = TextAttributesKey.createTextAttributesKey("SWAY_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT)
         val OPERATOR = TextAttributesKey.createTextAttributesKey("SWAY_OPERATOR", DefaultLanguageHighlighterColors.OPERATION_SIGN)
+        val TYPE = TextAttributesKey.createTextAttributesKey("SWAY_TYPE", DefaultLanguageHighlighterColors.CLASS_NAME)
     }
 }
