@@ -33,7 +33,7 @@
         <fileType
                 name="Sway"
                 language="Sway"
-                fileNames="*.sw"
+                extensions="sw"
                 implementationClass="fi.interjektio.dev.idea.sway.lang.SwayFileType"
                 fieldName="INSTANCE"
         />
