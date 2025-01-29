@@ -1,24 +1,36 @@
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "1.9.25"
-    id("org.jetbrains.intellij") version "1.17.4"
+//    id("org.jetbrains.intellij") version "1.17.4"
+    id("org.jetbrains.intellij.platform") version "2.2.1"
 }
 
-group = "fi.interjektio"
+group = "fi.interjektio.dev.idea"
 version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+
+    intellijPlatform {
+        defaultRepositories()
+    }
+}
+
+dependencies {
+    intellijPlatform {
+        intellijIdeaUltimate("2024.3.2.1")
+    }
 }
 
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
-intellij {
-    version.set("2024.1.7")
-    type.set("IC") // Target IDE Platform
-
-    plugins.set(listOf(/* Plugin Dependencies */))
-}
+//intellij {
+//    version.set("2024.1.7")
+//    type.set("IC") // Target IDE Platform
+//
+//    plugins.set(listOf(/* Plugin Dependencies */))
+//}
+//
 
 tasks {
     // Set the JVM compatibility versions
